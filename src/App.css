@@ -7,6 +7,54 @@
   pointer-events: none;
 }
 
+body {
+  font-size: 30px;
+}
+
+input {
+  width: 300px;
+  margin: auto;
+  border: 3px solid black;
+  padding: 6px;
+}
+
+main *{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+
+#gameDiv {
+  margin: 150px auto;
+  width: 70%;
+  padding: 50px;
+  background-color: black;
+  position: relative;
+  color: gold;
+  font-weight: 700;
+}
+
+#divSeparation {
+  margin: 50px;
+}
+
+img {
+  margin: auto;
+  width: 700px;
+  height: 500px;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: rgb(0, 255, 42);
+  width: 50px;
+  justify-self: center;
+  display: inline-block; 
+  justify-items: center;
+  text-justify: center;
+  vertical-align: middle;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

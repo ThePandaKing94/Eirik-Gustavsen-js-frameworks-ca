@@ -4,9 +4,10 @@ import Spinner from "react-bootstrap/Spinner";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import axios from "axios";
+import GameInfo from './GameInfo';
 import Search from "../constants/Search";
 
-function Homelist() {
+function Home() {
   // keep all the games in the "store"
   const [games, setGames] = useState([])
   const [filteredGames, setFilteredGames] = useState([]);
@@ -25,13 +26,13 @@ function Homelist() {
   };
   // get all the games when this component loads
   useEffect(() => {
-    getDetails()
+    getDetails();
   }, [])
 
   const filterGames = function (e) {
     const searchValue = e.target.value.toLowerCase();
-    const filteredArray = games.filter(function (game) {
-      const lowerCaseName = game.title.toLowerCase();
+    const filteredArray = games.filter(function (games) {
+      const lowerCaseName = games.title.toLowerCase();
       if (lowerCaseName.includes(searchValue)) {
         return true;
       }
@@ -45,16 +46,17 @@ function Homelist() {
     return <Spinner animation="border" className="spinner" />;
   }
   return (
-    <div>
-      <h1>Games</h1>
-      <Search handleSearch={filterGames} />
-      <div>
-      {filteredGames.map((games) =>
-          <Homelist name={games.name}  href={games.href} rating={games.rating} released={games.released} />
-       )}
+      <main >
+            <h1>Games</h1>
+            <Search handleSearch={filterGames} />
+            <div id="gameDiv">
+           
+            {filteredGames.map((games) =>
+                <GameInfo name={games.name}  background_image={games.background_image} metacritic={games.metacritic} released={games.released} />
+             )}
+            
       </div>
-      
-    </div>
+    </main>
   )
 }
-export default Homelist;
+export default Home;
