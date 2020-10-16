@@ -1,14 +1,14 @@
 import React from "react"
 import PropTypes from 'prop-types';
 
-function GameInfo({name, href, metacritic, background_image, released }) {
+function GameInfo({name, href, metacritic, background_image, released, id }) {
     return (
         <div>
             <span>{name}</span>    
             <img src={background_image} />
             <span>Metacritic: {metacritic}</span>
             <span>Release Date: {released}</span>
-            <button href={href}>Like</button>
+            <a href={"/details?id=" +id}>Like</a>
         </div>
     )
 }

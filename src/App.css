@@ -53,6 +53,7 @@ button {
   justify-items: center;
   text-justify: center;
   vertical-align: middle;
+  margin-bottom: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
