@@ -7,7 +7,7 @@ function GameInfo({name, background_image, description, id}) {
             <span>{name}</span>    
             <img src={background_image} />
             <span>Description: {description}</span>
-            <a href={"/details?id=" +id}>Visit Video Game Site</a>
+            <a href={"https://api.rawg.io/api/games/" +id}>Visit Video Game Site</a>
         </div>
     )
 }

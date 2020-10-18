@@ -4,12 +4,11 @@ import Contact from './menu/game/Contact';
 import Home from './menu/game/Home';
 import GameDetail from './menu/game/GameDetail';
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-
 function App() {
   return (
     <div className="App">
-      <div href="/">Home</div>
-      <div href="/Contact">Contact</div>
+      <a href="/">Home</a>
+      <a href="/contact">Contact</a>
       <BrowserRouter>
         <Switch>
           <Route path={`/`} exact component={Home} />
