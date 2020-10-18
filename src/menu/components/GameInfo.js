@@ -8,7 +8,7 @@ function GameInfo({name, href, metacritic, background_image, released, id }) {
             <img src={background_image} />
             <span>Metacritic: {metacritic}</span>
             <span>Release Date: {released}</span>
-            <a href={"/details?id=" +id}>Like</a>
+            <a href={"/details/" +id}>Like</a>
         </div>
     )
 }

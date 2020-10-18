@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
 import Spinner from "react-bootstrap/Spinner";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import axios from "axios";
-import GameInfo from '../constants/GameInfo';
-import Search from "../constants/Search";
+import GameInfo from '../components/GameInfo';
+import Search from "../components/Search";
 
 function Home() {
   const [games, setGames] = useState([])

@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
-import Home from './Home';
-import GameInfo from '../constants/GameInfo';
+import SpecificGame from "../components/SpecificGame";
+import Props from 'props';
 
-function GameDetail(params) {
-    
+function GameDetail(props) {
+  // const gameId = props.match.params.id;
 
+  console.log("hi");
 
-return (
-  <div>
+  return (
+    <div>
+      {/* {gameId} */}
+      <div id="gameDiv">
 
-  </div>
-)
+          <SpecificGame name={this.props.name} background_image={this.props.background_image} description={this.props.description} id= {this.props.id} />
+
+      </div>
+    </div>
+  )
 }
 
-export default GameDetail;
+export default GameDetail();
